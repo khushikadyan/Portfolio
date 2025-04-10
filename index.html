@@ -12,12 +12,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/style/style.css">
+    <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body data-bs-theme="light">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand gradient-text" href="#">Sarthak Maan | Software Engineer</a>
+            <a class="navbar-brand gradient-text" href="#">Khushi Kadyan | Software Engineer</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -57,13 +64,13 @@
     <!-- Home Section -->
     <section id="home" class="min-vh-100 d-flex align-items-center position-relative overflow-hidden">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 pe-lg-5 animate__animated animate__fadeInLeft">
-                    <h1 class="display-3 fw-bold mb-3">Hi, I'm <br><span class="text-primary">Sarthak Maan</span></h1>
-                    <h2 class="display-6 mb-4 text-gradient">Web Developer & Designer</h2>
-                    <p class="lead mb-4">I create beautiful, functional websites and applications with a focus on user experience.</p>
+            <div class="row align-items-center  flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 pe-lg-5 animate__animated animate__fadeInLeft para">
+                    <br><h1 class="display-3 fw-bold mb-3">Hi, I'm <br><span class="text-primary">Khushi Kadyan</span></h1>
+                    <h2 class="display-6 mb-4 text-gradient">Software Engineer & Data Analyst</h2>
+                    <p class="lead mb-3">Curiosity sparks my code, inovation shapes my vision — I build solutions that matter.</p>
                     <div class="d-flex gap-3 mb-5">
-                        <a href="#contact" class="btn btn-primary btn-lg px-4">View my resume</a>
+                        <a href="#contact" class="btn btn-primary btn-lg px-3  shadow-sm me-2">View my resume</a>
                         <a href="#projects" class="btn btn-outline-primary btn-lg px-4">My Work</a>
                     </div>
                     
@@ -100,11 +107,11 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                <div class="col-lg-6 animate__animated animate__fadeInRight ">
                     <div class="profile-container position-relative">
                         <div class="profile-shape">
                             <div class="hexagon">
-                                <img src="assets/images/sarthak.jpg" alt="Profile" class="profile-img">
+                                <img src="assets/images/me3.jpg" alt="Profile" class="profile-img">
                             </div>
                         </div>
                         <div class="animated-dots">
@@ -123,114 +130,317 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <section id="about" class="py-2 bg-light position-relative overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="about-bg-circle-1"></div>
+        <div class="about-bg-circle-2"></div>
+        
         <div class="container py-5">
             <div class="row">
-                <div class="col-12 text-center mb-5 animate__animated animate__fadeIn">
-                    <h2 class="display-5 fw-bold">About <span class="text-primary">Me</span></h2>
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">About <span class=" text-primary">Me</span></h2>
                     <div class="underline mx-auto"></div>
+                    <p class="lead mt-3">I'm a B.Tech CSE student specializing in Data Science and Artificial Intelligence, with a deep passion for coding, problem-solving, and developing innovative solutions.</p>
                 </div>
             </div>
+            
             <div class="row align-items-center">
-                <div class="col-lg-5 animate__animated animate__fadeInLeft">
-                    <img src="https://via.placeholder.com/400x500" alt="About" class="img-fluid rounded shadow">
+                <!-- Profile Image with Creative Effects -->
+                <div class="col-lg-5 animate__animated">
+                    <div class="profile-frame">
+                        <div class="hollow-box"></div>
+                        <div class="hollow-box hollow-box-2"></div>
+                        <img src="assets/images/me2.jpg" alt="About" class="about-img">
+                        <div class="tech-bubbles">
+                            <span class="bubble c">C</span>
+                            <span class="bubble java">Java</span>
+                            <span class="bubble python">Py</span>
+                            <span class="bubble sql">SQL</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-7 pt-4 pt-lg-0 animate__animated animate__fadeInRight">
-                    <h3 class="mb-3">Who am I?</h3>
-                    <p class="lead">I'm a passionate web developer with 5+ years of experience creating digital solutions.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><strong>Name:</strong> John Doe</li>
-                                <li class="mb-2"><strong>Email:</strong> john@example.com</li>
-                                <li class="mb-2"><strong>Phone:</strong> +1 234 567 890</li>
-                            </ul>
+                
+                <!-- Coding Journey Timeline -->
+                <div class="col-lg-7 pt-4 pt-lg-0">
+                    <section class="service">
+                        <h3 class="h3 service-title">My Coding Evolution</h3>
+                        <span class="animated-text" data-words="Web Developer, Data Scientist, Java Developer, ML Engineer"></span>
+                         <p>My journey began with curiosity — a simple interest in how things work turned into a drive to build things that matter. From writing my first lines of code to developing intelligent systems, every project has been a step toward turning imagination into reality.</p><br>
+                        
+                         <ul class=" timeline-grid service-list Timeline">
+                            <!-- C Programming -->
+                            <li class="service-item" data-year="2018">
+                                <div class="timeline-card">
+                                <div class=" service-icon-box">
+                                    <img src="./assets/images/Cicon.jpeg" alt="C icon" width="40">
+                                </div>
+                                <div class="service-content-box">
+                                    <h4 class="h4 service-item-title">C Programming</h4>
+                                    <p class="service-item-text">
+                                        Started my journey with low-level programming, understanding memory management and algorithms.
+                                    </p>
+                                    <span class="year-badge">2022</span>
+                                   
+                                </div>
+                            </div>
+                            </li>
+    
+                            <!-- Web Development -->
+                            <li class="service-item" data-year="2019">
+                                <div class="timeline-card">                                <div class="service-icon-box">
+                                    <img src="./assets/images/web_devIcon.jpeg" alt="Web dev icon" width="40">
+                                </div>
+                                <div class="service-content-box">
+                                    <h4 class="h4 service-item-title">Web Development</h4>
+                                    <p class="service-item-text">
+                                        Built my first websites with HTML/CSS/JS, then progressed to React and Node.js frameworks.
+                                    </p>
+                                    <span class="year-badge">2022</span>
+                                
+                                </div>
+                            </div>
+                            </li>
+    
+                            <!-- Java -->
+                            <li class="service-item" data-year="2020">
+                                <div class="timeline-card">
+                                <div class="service-icon-box">
+                                    <img src="./assets/images/javaIcon.jpeg" alt="Java icon" width="40">
+                                </div>
+                                <div class="service-content-box">
+                                    <h4 class="h4 service-item-title">Java Development</h4>
+                                    <p class="service-item-text">
+                                        Developed enterprise applications using Spring Boot and learned OOP principles deeply.
+                                    </p>
+                                    <span class="year-badge">2023</span>
+                                    
+                                </div>
+                            </div>
+                            </li>
+    
+                            <!-- Databases -->
+                            <li class="service-item" data-year="2021">
+                                <div class="timeline-card">
+                                <div class="service-icon-box">
+                                    <img src="./assets/images/databaseIcon.jpeg" alt="Database icon" width="40">
+                                </div>
+                                <div class="service-content-box">
+                                    <h4 class="h4 service-item-title">Databases</h4>
+                                    <p class="service-item-text">
+                                        Mastered SQL databases (MySQL, PostgreSQL) and NoSQL (MongoDB) for scalable applications.
+                                    </p>
+                                    <span class="year-badge">2024</span>
+                                </div>
                         </div>
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><strong>Experience:</strong> 5+ Years</li>
-                                <li class="mb-2"><strong>Freelance:</strong> Available</li>
-                                <li class="mb-2"><strong>Location:</strong> New York, USA</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <a href="#" class="btn btn-primary me-2">Download CV</a>
-                        <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
-                    </div>
+                            </li>
+    
+                            <!-- Python & ML -->
+                            <li class="service-item" data-year="2022-Present">
+                                <div class="timeline-card">
+                                <div class="service-icon-box">
+                                    <img src="./assets/images/pyIcon.jpeg" alt="ML icon" width="40">
+                                </div>
+                                <div class="service-content-box">
+                                    <h4 class="h4 service-item-title">Python & Machine Learning</h4>
+                                    <p class="service-item-text">
+                                        Currently building AI models with TensorFlow and exploring data science applications.
+                                    </p>
+                                    <span class="year-badge">2025</span>
+                                </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
             </div>
         </div>
     </section>
 
+
+
     <!-- Resume Section -->
     <section id="resume" class="py-5">
         <div class="container py-5">
             <div class="row">
-                <div class="col-12 text-center mb-5 animate__animated animate__fadeIn">
+            
+                    <h3 class="lead mt-3 text-center my-4 py-4">Coding isn't just a skill, it's my way of exploring ideas and crafting innovation.</h3>
+                 
+                <div class="col-12 text-center mb-5">
                     <h2 class="display-5 fw-bold">My <span class="text-primary">Resume</span></h2>
                     <div class="underline mx-auto"></div>
+                    
                 </div>
             </div>
+            
             <div class="row">
-                <div class="col-lg-6 animate__animated animate__fadeInLeft">
-                    <h3 class="mb-4">Education</h3>
-                    <div class="resume-item mb-4">
-                        <div class="d-flex">
-                            <div class="resume-date me-4">
-                                <p class="fw-bold mb-0">2015 - 2019</p>
+                <!-- Education Column -->
+                <div class="col-lg-6 resume-column">
+                    <div class="animate-on-scroll">
+                        <div class="title-wrapper">
+                            <div class="icon-box">
+                                <ion-icon name="book-outline"></ion-icon>
                             </div>
-                            <div class="resume-content">
-                                <h4>Master in Computer Science</h4>
-                                <p class="text-muted">Harvard University</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
+                            <h3 class="h3">Education</h3>
                         </div>
+    
+                        <ol class="resume-timeline-list">
+                            <li class="resume-timeline-item animate__animated">
+                                <h4 class="h4 resume-item-title">SRM University Sonepat, Haryana</h4>
+                                <span class="resume-period">2022 — 2026</span>
+                                <p class="resume-text">
+                                    Current CGPA - 7.77
+                                </p>
+                                <div class="timeline-marker"></div>
+                            </li>
+    
+                            <li class="resume-timeline-item animate__animated">
+                                <h4 class="h4 resume-item-title">Dyal Singh Public School</h4>
+                                <span class="resume-period">2004 — 2022</span>
+                                <p class="resume-text">
+                                    12 CBSE Board- 83.8% | 10 CBSE board- 89%
+                                </p>
+                                <div class="timeline-marker"></div>
+                            </li>
+                        </ol>
                     </div>
-                    <div class="resume-item mb-4">
-                        <div class="d-flex">
-                            <div class="resume-date me-4">
-                                <p class="fw-bold mb-0">2011 - 2015</p>
-                            </div>
-                            <div class="resume-content">
-                                <h4>Bachelor in Computer Science</h4>
-                                <p class="text-muted">Stanford University</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="resume-btn-container">
+                        <a href="path/to/your-resume.pdf" target="_blank" class="resume-btn">
+                          <span class="resume-btn-text">View My Resume</span>
+                          <span class="resume-btn-icon">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                          </span>
+                          <span class="resume-btn-effect"></span>
+                        </a>
+                      </div>
                 </div>
-                <div class="col-lg-6 animate__animated animate__fadeInRight">
-                    <h3 class="mb-4">Experience</h3>
-                    <div class="resume-item mb-4">
-                        <div class="d-flex">
-                            <div class="resume-date me-4">
-                                <p class="fw-bold mb-0">2021 - Present</p>
+                
+                <!-- Experience Column -->
+                <div class="col-lg-6 resume-column">
+                    <div class="animate-on-scroll">
+                        <div class="title-wrapper">
+                            <div class="icon-box">
+                                <ion-icon name="briefcase-outline"></ion-icon>
                             </div>
-                            <div class="resume-content">
-                                <h4>Senior Web Developer</h4>
-                                <p class="text-muted">Google</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
+                            <h3 class="h3">Experience</h3>
                         </div>
-                    </div>
-                    <div class="resume-item mb-4">
-                        <div class="d-flex">
-                            <div class="resume-date me-4">
-                                <p class="fw-bold mb-0">2019 - 2021</p>
-                            </div>
-                            <div class="resume-content">
-                                <h4>Web Developer</h4>
-                                <p class="text-muted">Facebook</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
+    
+                        <ol class="resume-timeline-list">
+                            <li class="resume-timeline-item animate__animated">
+                                <h4 class="h4 resume-item-title">M1B1 - AI Sustainablity Virtual internship</h4>
+                                <span class="resume-period">2025 — Present</span>
+                                <p class="resume-text">
+                                    Worked as a Java Development Intern at CodSoft, where I built Java-based applications, 
+                                    implemented OOP principles, and optimized algorithms. Gained real-world experience in coding,
+                                    debugging, and project collaboration.
+                                </p>
+                                <div class="timeline-marker"></div>
+                            </li>
+    
+                            <li class="resume-timeline-item animate__animated">
+                                <h4 class="h4 resume-item-title">Infosys - springbooard cohert -5</h4>
+                                <span class="resume-period">2025</span>
+                                <p class="resume-text">
+                                    Completed a Web Development Internship at Cognifyz, where I worked on frontend and backend technologies, 
+                                    built responsive web applications, and implemented HTML, CSS, JavaScript, and frameworks like React.js.
+                                </p>
+                                <div class="timeline-marker"></div>
+                            </li>
+    
+                            <li class="resume-timeline-item animate__animated">
+                                <h4 class="h4 resume-item-title">Udemy - Java DSA & Algorithm by Scott</h4>
+                                <span class="resume-period">February 2025</span>
+                                <p class="resume-text">
+                                    Completed an in-depth Java Data Structures and Algorithms course covering time complexity analysis,
+                                    recursion, sorting, searching, linked lists, stacks, queues, trees, and graphs.
+                                </p>
+                                <div class="timeline-marker"></div>
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+<!--skill section-->
+    <section id="skills" class="py-5">
+        <div class="container">
+          <div class="row text-center mb-5">
+            <h2 class="display-5 fw-bold">My <span class="text-primary">Skills</span></h2>
+            <div class="underline mx-auto"></div>
+            <p class="lead">Technologies I work with</p>
+          </div>
+      
+          <div class="row skill-grid justify-content-center">
+            <!-- Programming Languages -->
+            <div class="col-md-4 skill-category animate-on-scroll">
+              <div class="skill-header">
+                <div class="skill-icon">
+                  <ion-icon name="code-slash-outline"></ion-icon>
+                </div>
+                <h3>Languages</h3>
+              </div>
+              <ul class="skill-list">
+                <li class="skill-pill" data-delay="100">Java</li>
+                <li class="skill-pill" data-delay="150">Python</li>
+                <li class="skill-pill" data-delay="200">JavaScript</li>
+                <li class="skill-pill" data-delay="250">C</li>
+              </ul>
+            </div>
+      
+            <!-- Web Development -->
+            <div class="col-md-4 skill-category animate-on-scroll">
+              <div class="skill-header">
+                <div class="skill-icon">
+                  <ion-icon name="globe-outline"></ion-icon>
+                </div>
+                <h3>Web Dev</h3>
+              </div>
+              <ul class="skill-list">
+                <li class="skill-pill" data-delay="100">HTML/CSS</li>
+                <li class="skill-pill" data-delay="150">Tailwind</li>
+                <li class="skill-pill" data-delay="200">React.js</li>
+                <li class="skill-pill" data-delay="250">SpringFrameWork</li>
+                <li class="skill-pill" data-delay="250">Spring BOOt</li>
+              </ul>
+            </div>
+      
+            <!-- Databases & Tools -->
+            <div class="col-md-4 skill-category animate-on-scroll">
+              <div class="skill-header">
+                <div class="skill-icon">
+                  <ion-icon name="server-outline"></ion-icon>
+                </div>
+                <h3>Database & Tools</h3>
+              </div>
+              <ul class="skill-list">
+                <li class="skill-pill" data-delay="100">MongoDB</li>
+                <li class="skill-pill" data-delay="150">MySQL</li>
+                <li class="skill-pill" data-delay="200">Git</li>
+                <li class="skill-pill" data-delay="250">Docker</li>
+              </ul>
+            </div>
+            <div class="col-md-4 skill-category animate-on-scroll">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <ion-icon name="server-outline"></ion-icon>
+                  </div>
+                  <h3>Data Analysis and visualization</h3>
+                </div>
+                <ul class="skill-list">
+                  <li class="skill-pill" data-delay="100">Numpy</li>
+                  <li class="skill-pill" data-delay="150">Pandas</li>
+                  <li class="skill-pill" data-delay="200">Seaborn</li>
+                  <li class="skill-pill" data-delay="250">powerBI</li>
+                </ul>
+              </div>
+
+          </div>
+        </div>
+
+      
+        </div>
+      </div>
+      </section>
 
     <!-- Achievements Section -->
     <section id="achievements" class="py-5 bg-light">
@@ -356,15 +566,16 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
+    <section id="skill" class="py-5 bg-light">
         <div class="container py-5">
+            <h3>Every line of code I write is Fueled by purpose.</h3>
             <div class="row">
                 <div class="col-12 text-center mb-5 animate__animated animate__fadeIn">
-                    <h2 class="display-5 fw-bold">My <span class="text-primary">Skills</span></h2>
+                    <h2 class="display-5 fw-bold"> Tech<span class="text-primary">Stack</span></h2>
                     <div class="underline mx-auto"></div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-6 animate__animated animate__fadeInLeft">
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
@@ -397,7 +608,7 @@
                 <div class="col-lg-6 animate__animated animate__fadeInRight">
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
-                            <h6 class="mb-0">Node.js</h6>
+                            <h6 class="mb-0">Java</h6>
                             <span>80%</span>
                         </div>
                         <div class="progress" style="height: 8px;">
@@ -449,7 +660,7 @@
                                     </div>
                                     <div>
                                         <h6 class="mb-0">Location</h6>
-                                        <p class="mb-0">New York, USA</p>
+                                        <p class="mb-0">Panipat,Haryana</p>
                                     </div>
                                 </div>
                             </li>
@@ -460,7 +671,7 @@
                                     </div>
                                     <div>
                                         <h6 class="mb-0">Email</h6>
-                                        <p class="mb-0">john@example.com</p>
+                                        <p class="mb-0">Kadyankhushi290@gmail.com</p>
                                     </div>
                                 </div>
                             </li>
@@ -471,7 +682,7 @@
                                     </div>
                                     <div>
                                         <h6 class="mb-0">Phone</h6>
-                                        <p class="mb-0">+1 234 567 890</p>
+                                        <p class="mb-0">+91 9138161816</p>
                                     </div>
                                 </div>
                             </li>
@@ -512,7 +723,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2023 My Portfolio. All rights reserved.</p>
+                    <p class="mb-0">&copy; 2025 Khushi Kadyan. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <a href="#home" class="text-white text-decoration-none me-3"><i class="fas fa-arrow-up"></i> Back to Top</a>

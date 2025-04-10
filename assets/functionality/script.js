@@ -1,91 +1,94 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Navbar scroll effect
+    // ========== DOM Elements ==========
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    const themeToggle = document.getElementById('themeToggle');
+    const contactForm = document.getElementById('contactForm');
+    
+    // ========== Helper Functions ==========
+    function updateThemeIcon(theme) {
+        if (!themeToggle) return;
+        const themeIcon = themeToggle.querySelector('i');
+        themeIcon.classList.toggle('fa-moon', theme === 'light');
+        themeIcon.classList.toggle('fa-sun', theme === 'dark');
+    }
 
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+    // ========== Navbar Scroll Effect ==========
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    }
+
+    // ========== Smooth Scrolling ==========
+    document.addEventListener('click', function(e) {
+        const anchor = e.target.closest('a[href^="#"]');
+        if (anchor) {
             e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
+            const targetId = anchor.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+                const navbarHeight = navbar ? navbar.offsetHeight : 70;
                 window.scrollTo({
-                    top: targetElement.offsetTop - 70,
+                    top: targetElement.offsetTop - navbarHeight,
                     behavior: 'smooth'
                 });
                 
-                // Close mobile menu when a link is clicked
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse.classList.contains('show')) {
+                // Close mobile menu if open
+                const navbarCollapse = document.querySelector('.navbar-collapse.show');
+                if (navbarCollapse) {
                     navbarCollapse.classList.remove('show');
                 }
             }
-        });
+        }
     });
 
-    // Dark/Light mode toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = themeToggle.querySelector('i');
-    
-    // Check for saved theme preference or use preferred color scheme
-    const savedTheme = localStorage.getItem('theme') || 
-                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    document.body.setAttribute('data-bs-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-    
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = document.body.getAttribute('data-bs-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    // ========== Theme Toggle ==========
+    if (themeToggle) {
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 
+                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.body.setAttribute('data-bs-theme', savedTheme);
+        updateThemeIcon(savedTheme);
         
-        document.body.setAttribute('data-bs-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
-    
-    function updateThemeIcon(theme) {
-        if (theme === 'dark') {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        } else {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        }
+        // Toggle theme
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = document.body.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.body.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
     }
 
-    // Animation on scroll
-    const animateElements = document.querySelectorAll('.animate__animated');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const animation = entry.target.getAttribute('data-animation');
-                entry.target.classList.add('animate__' + animation);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-    
-    animateElements.forEach(element => {
-        observer.observe(element);
-    });
+    // ========== Scroll Animations ==========
+    const animateOnScroll = (elements, animationClass, stagger = false) => {
+        if (!elements.length) return;
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    if (stagger) {
+                        entry.target.style.transitionDelay = `${0.1 * index}s`;
+                    }
+                    entry.target.classList.add(animationClass);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
+        elements.forEach(el => observer.observe(el));
+    };
+
+     // Initialize all animations
+     animateOnScroll(document.querySelectorAll('.animate-on-scroll, .resume-timeline-item, .service-item, .skill-category'), 'visible', true);
+     animateOnScroll(document.querySelectorAll('.skill-pill'), 'visible', true);
+
+    // ========== Contact Form ==========
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Here you would typically send the form data to a server
+            // Form submission logic
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
         });
