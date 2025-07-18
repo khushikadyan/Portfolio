@@ -94,3 +94,47 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+ (function() {
+        emailjs.init('eQPtNh1O8NDf6qc7h');
+    })();
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const submitBtn = document.getElementById('submitBtn');
+        const errorMessage = document.getElementById('errorMessage');
+        const successMessage = document.getElementById('successMessage');
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Sending...
+        `;
+        
+        // Prepare form data
+        const formData = {
+            from_name: document.getElementById('name').value,
+            from_email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+            to_email: 'kadyankhushi290@gmail.com' // Your receiving email
+        };
+        
+        // Send email
+        emailjs.send('service_i6hsru9', 'template_dy318mn', formData)
+            .then(function(response) {
+                successMessage.classList.remove('d-none');
+                errorMessage.classList.add('d-none');
+                document.getElementById('contactForm').reset();
+            }, function(error) {
+                errorMessage.textContent = 'Error: ' + error.text;
+                errorMessage.classList.remove('d-none');
+                successMessage.classList.add('d-none');
+            })
+            .finally(function() {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message';
+            });
+    });
