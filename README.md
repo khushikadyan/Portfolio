@@ -65,7 +65,7 @@ git push origin main
 ## Contact
 If you'd like to connect or collaborate, reach out:
 
-Email: your.email@example.com
+Email: kadyankhushi290@gmai.com
 
 LinkedIn: linkedin.com/in/your-profile
 
